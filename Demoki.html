@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accès Outlook</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Accès Outlook</h2>
+        <p><strong>Email:</strong> <span id="email">room-03@kd-dws.net</span></p>
+        <button onclick="copyToClipboard('email')">Copier l'email</button>
+        <p><strong>Mot de passe:</strong> <span id="password">Ploproom03</span></p>
+        <button onclick="copyToClipboard('password')">Copier le mot de passe</button>
+        <br>
+        <a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=172&ct=1740412182&rver=7.5.2211.0&wp=MBI_SSL&wreply=https://outlook.live.com/owa/?nlp=1&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&RpsCsrfState=95e34b64-8579-fbe1-4190-ecc9ccfc244e&id=292841&aadredir=1&CBCXT=out&lw=1&fl=dob,flname,wld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c" target="_blank">Se connecter à Outlook</a>
+        <br><br>
+        <a href='https://postimg.cc/JDvY8yz4' target='_blank'>
+            <img src='https://i.postimg.cc/4yNDzVCt/Sch-ma-de-la-Demokit.png' border='0' alt='Schéma de la Demokit' style="max-width:100%;">
+        </a>
+    </div>
+
+    <script>
+        function copyToClipboard(id) {
+            const text = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Copié: " + text);
+            });
+        }
+    </script>
+</body>
+</html>
