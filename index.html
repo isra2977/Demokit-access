@@ -8,23 +8,24 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            margin: 50px;
-            position: relative;
+            margin: 0;
+            background-color: #f9f9f9;
         }
         .container {
             max-width: 400px;
-            margin: auto;
+            margin: 50px auto;
             padding: 20px;
-            border: 1px solid #ccc;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: #f9f9f9;
+            background-color: white;
         }
         .logo {
-            position: absolute;
-            top: 10px;
-            left: 10px;
             width: 120px;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        h2 {
+            color: #d32f2f;
         }
         button {
             display: block;
@@ -33,36 +34,56 @@
             margin-top: 10px;
             font-size: 16px;
             cursor: pointer;
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #b71c1c;
         }
         #password-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background-color: #e0e0e0;
+            padding: 5px;
+            border-radius: 5px;
+            margin-top: 10px;
         }
         #password {
             font-size: 16px;
             font-weight: bold;
             letter-spacing: 2px;
-            background-color: #e0e0e0;
-            padding: 5px;
-            border-radius: 5px;
+            border: none;
+            background: transparent;
             width: 100%;
             text-align: center;
             display: none;
         }
         #password-input {
-            width: 80%;
+            width: 100%;
             padding: 5px;
             margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        a {
+            color: #d32f2f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
-    <img src="https://media.licdn.com/dms/image/v2/C4D0BAQHZCmUoVWrWjw/company-logo_200_200/company-logo_200_200/0/1630580235057/kardham_digital_logo?e=2147483647&v=beta&t=5Epzc45QjE0CEjsLb8MXx8UJ9hOkoez1ppQq6TRQa5E" 
-         alt="Kardham Digital" class="logo">
-
     <div class="container">
+        <img src="https://media.licdn.com/dms/image/v2/C4D0BAQHZCmUoVWrWjw/company-logo_200_200/company-logo_200_200/0/1630580235057/kardham_digital_logo?e=2147483647&v=beta&t=5Epzc45QjE0CEjsLb8MXx8UJ9hOkoez1ppQq6TRQa5E" 
+             alt="Kardham Digital" class="logo">
+
         <h2>Accès Outlook</h2>
         <p><strong>Email:</strong> <span id="email">room-03@kd-dws.net</span></p>
         <button onclick="copyToClipboard('email')">Copier l'email</button>
